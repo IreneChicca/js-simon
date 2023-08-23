@@ -36,8 +36,11 @@ console.log((tomorrowHour-todayHour)+":"+(tomorrowMin-todayMin)+":"+(tomorrowSec
 const timeDiff = Math.floor(tomorrowDate-todayDate).valueOf()
 console.log(timeDiff)
 
+let secDiff = parseInt((timeDiff/1000)%60)
+let minDiff = parseInt((timeDiff/(1000*60)%60))
+let hourDiff = parseInt((timeDiff/(1000*60*60))%24)
 
-
+console.log(hourDiff+":"+minDiff+":"+secDiff)
 
 
 
