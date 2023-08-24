@@ -12,6 +12,9 @@ let timeDiff = Math.floor(tomorrowDate-todayDate).valueOf()
 console.log(timeDiff)
 
 
+function StopCount() {
+    clearInterval(count)
+}
 
 
 
@@ -27,12 +30,14 @@ const count = setInterval(function(){
     sec.innerHTML = secDiff;
     
 
+    
+    if (timeDiff < 0)
+    {
+        StopCount()
+    }
+
 
 },1000);
 
-function StopCount() {
-    clearInterval(count)
-}
 
 
-StopCount()
