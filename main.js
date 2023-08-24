@@ -15,7 +15,7 @@ console.log(timeDiff)
 
 
 
-setInterval(function(){
+const count = setInterval(function(){
 
     timeDiff = timeDiff - 1000;
     let secDiff = parseInt((timeDiff/1000)%60)
@@ -29,3 +29,10 @@ setInterval(function(){
 
 
 },1000);
+
+function StopCount() {
+    clearInterval(count)
+}
+
+
+StopCount()
