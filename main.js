@@ -19,6 +19,11 @@ function StopCount() {
 
 
 const count = setInterval(function(){
+ if (timeDiff < 0)
+    {
+        timeDiff = 1;
+        StopCount()
+    }
 
     timeDiff = timeDiff - 1000;
     let secDiff = parseInt((timeDiff/1000)%60)
@@ -31,11 +36,7 @@ const count = setInterval(function(){
     
 
     
-    if (timeDiff < 0)
-    {
-        StopCount()
-    }
-
+   
 
 },1000);
 
